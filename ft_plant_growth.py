@@ -17,10 +17,11 @@ class Plant:
 
     def grow(self) -> None:
         self.height += 1
-    
+
     def age(self) -> None:
         self.ages += 1
-    
+
+
 if __name__ == "__main__":
     p1 = Plant("Rose", 12, 30)
 
