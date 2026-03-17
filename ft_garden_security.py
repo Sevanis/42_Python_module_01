@@ -1,16 +1,16 @@
 #!/bin/python3
 
-class Plant:
+class SecurePlant:
 
-    list_plant: list["Plant"] = []
+    list_plant: list["SecurePlant"] = []
     total: int = 0
 
     def __init__(self, name: str, height: int, age: int) -> None:
         self._name: str = name
         self._height: int = height
         self._ages: int = age
-        Plant.list_plant += [self]
-        Plant.total += 1
+        SecurePlant.list_plant += [self]
+        SecurePlant.total += 1
         print(f"Plant created: {self.get_name()}\n")
 
     def set_age(self, value: int) -> None:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
     print("=== Garden Security System ===")
 
-    plant = Plant("Rose", 20, 25)
+    plant = SecurePlant("Rose", 20, 25)
     plant.set_height(25)
     plant.set_age(30)
     plant.set_age(-5)

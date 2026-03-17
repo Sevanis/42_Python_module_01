@@ -32,6 +32,7 @@ if __name__ == "__main__":
     p1.get_info()
 
     print(f"=== Day {day} ===")
+    
     for x in range(1, day):
         p1.grow()
         p1.age()
