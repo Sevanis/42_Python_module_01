@@ -11,9 +11,7 @@ class Plant:
         self._ages: int = age
         Plant.list_plant += [self]
         Plant.total += 1
-
-    def get_info(self) -> str:
-        return f"{self._name} ({self._height}cm, {self._ages} days)"
+        print(f"Plant created: {self.get_name()}\n")
 
     def set_age(self, value: int) -> None:
         if value < 0:
@@ -31,7 +29,7 @@ class Plant:
             print("Security: Negative height rejected")
         else:
             self._height = value
-            print(f"Height updated: {self._ages}cm [OK]")
+            print(f"Height updated: {self._height}cm [OK]")
 
     def get_name(self) -> str:
         return self._name
@@ -42,17 +40,17 @@ class Plant:
     def get_age(self) -> int:
         return self._ages
 
+    def get_info(self) -> str:
+        return f"{self._name} ({self._height}cm, {self._ages} days)"
+
 
 if __name__ == "__main__":
 
-    plant = Plant("Rose", 20, 25)
-
     print("=== Garden Security System ===")
-    print(f"Plant created: {plant.get_name()}\n")
 
+    plant = Plant("Rose", 20, 25)
     plant.set_height(25)
     plant.set_age(30)
-    plant.set_age(-3)
-    plant.set_height(-30)
+    plant.set_age(-5)
 
     print(f"\nCurent plant: {plant.get_info()}")
