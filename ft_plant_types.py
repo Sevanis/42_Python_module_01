@@ -79,5 +79,3 @@ if __name__ == "__main__":
 
     print(vegetable_1.get_info())
     vegetable_1.nutritional_value()
-    print("\n\n")
-    print(*(p.get_info() for p in Plant.list_plant), sep="\n")

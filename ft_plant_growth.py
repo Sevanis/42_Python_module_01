@@ -32,10 +32,13 @@ if __name__ == "__main__":
     p1.get_info()
 
     print(f"=== Day {day} ===")
-    
-    for x in range(1, day):
+
+    temp = day
+    while temp != 0:
         p1.grow()
         p1.age()
+        temp -= 1
+
     p1.get_info()
     if day == 7:
         print(f"Growth this week: +{p1.height - rose_height}cm")
