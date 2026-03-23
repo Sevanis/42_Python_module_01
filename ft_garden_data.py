@@ -12,7 +12,7 @@ class Plant:
         Plant.list_plant += [self]
         Plant.total += 1
 
-    def describe(self) -> None:
+    def show(self) -> None:
         print(f"{self.name}: {self.height}cm, {self.age} days old")
 
 
@@ -25,4 +25,4 @@ if __name__ == "__main__":
 
     print("=== Garden Plant Registry ==")
     for plant in Plant.list_plant:
-        plant.describe()
+        plant.show()
