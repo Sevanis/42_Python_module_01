@@ -8,9 +8,14 @@ class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:
         self._name = name
         self._height = height
-        self._ages = age
+        self._age = age
         Plant.list_plant += [self]
         Plant.total += 1
+
+    @staticmethod
+    def is_year(day: int) -> None:
+        print(f"Is {day} days more than a year? -> {True if day >= 365 else False}")
+        
 
     def get_info(self) -> str:
         return f"- {self._name}: {self._height}cm"
@@ -197,27 +202,29 @@ class GardenManager:
 
 
 if __name__ == "__main__":
-    flower_1 = FloweringPlant("Rose", 25, 30, "red")
-    flower_2 = FloweringPlant("Violet", 25, 30, "blue")
-    flower_3 = Plant("Oak tree", 248, 302)
-    flower_4 = PrizeFlower("Sunflower", 120, 38, "yellow", 10)
+    Plant.is_year(30)
+    Plant.is_year(400)
+    # flower_1 = FloweringPlant("Rose", 25, 30, "red")
+    # flower_2 = FloweringPlant("Violet", 25, 30, "blue")
+    # flower_3 = Plant("Oak tree", 248, 302)
+    # flower_4 = PrizeFlower("Sunflower", 120, 38, "yellow", 10)
 
-    alice = GardenManager("Alice")
-    garden = alice.create_garden()
-    bob = GardenManager("Bob")
-    garden_2 = bob.create_garden()
+    # alice = GardenManager("Alice")
+    # garden = alice.create_garden()
+    # bob = GardenManager("Bob")
+    # garden_2 = bob.create_garden()
 
-    print("=== Garden Management System Demo ===\n")
-    alice.add_plant(flower_3, garden)
-    alice.add_plant(flower_1, garden)
-    alice.add_plant(flower_4, garden)
-    bob.add_plant(flower_2, garden_2)
-    flower_1.bloom()
-    flower_4.bloom()
-    print()
-    alice.grow_all()
-    print()
-    GardenManager.GardenStats.manager_report(alice)
-    # GardenManager.GardenStats.manager_report(bob)
-    Plant.validate_height(flower_1.get_height())
-    GardenManager.create_garden_network()
+    # print("=== Garden Management System Demo ===\n")
+    # alice.add_plant(flower_3, garden)
+    # alice.add_plant(flower_1, garden)
+    # alice.add_plant(flower_4, garden)
+    # bob.add_plant(flower_2, garden_2)
+    # flower_1.bloom()
+    # flower_4.bloom()
+    # print()
+    # alice.grow_all()
+    # print()
+    # GardenManager.GardenStats.manager_report(alice)
+    # # GardenManager.GardenStats.manager_report(bob)
+    # Plant.validate_height(flower_1.get_height())
+    # GardenManager.create_garden_network()

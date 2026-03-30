@@ -12,7 +12,7 @@ class Plant:
         Plant.list_plant += [self]
         Plant.total += 1
 
-    def get_info(self) -> str:
+    def show(self) -> str:
         return f"{self.name} ({self.height}cm, {self.ages} days)"
 
 
@@ -24,10 +24,9 @@ if __name__ == "__main__":
                 ("Cactus", 5, 90),
                 ("Sunflower", 80, 45),
                 ("Fern", 15, 120),
-                ("Coco", 20, 20)]
+                ("Coconut", 20, 20)]
 
-    for name, height, age in plant_data:
-        plant = Plant(name=name, height=height, age=age)
-        print(f"created: {plant.get_info()}")
-
-    print(f"\nTotal plants created: {Plant.total}")
+    print("=== Plant Factory Output ===")
+    for p in plant_data:
+        plant = Plant(*p)
+        print(f"created: {plant.show()}")
