@@ -29,7 +29,7 @@ if __name__ == "__main__":
     rose_height = p1.height
     print("=== Day 1 ===")
     p1.show()
-    for day in range (2, days + 1):
+    for day in range(2, days + 1):
         print(f"=== Day {day} ===")
         p1.grow()
         p1.age()

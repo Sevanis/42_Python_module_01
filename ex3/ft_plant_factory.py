@@ -11,9 +11,10 @@ class Plant:
         self.ages: int = age
         Plant.list_plant += [self]
         Plant.total += 1
+        self.show()
 
-    def show(self) -> str:
-        return f"{self.name} ({self.height}cm, {self.ages} days)"
+    def show(self) -> None:
+        print(f"created: {self.name} ({self.height}cm, {self.ages} days)")
 
 
 if __name__ == "__main__":
@@ -29,4 +30,3 @@ if __name__ == "__main__":
     print("=== Plant Factory Output ===")
     for p in plant_data:
         plant = Plant(*p)
-        print(f"created: {plant.show()}")

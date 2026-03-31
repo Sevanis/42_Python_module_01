@@ -13,7 +13,7 @@ class Plant:
         Plant.total += 1
 
     def show(self) -> None:
-        print( f"{self._name} : {self._height}cm, {self._ages} days old")
+        print(f"{self._name} : {self._height}cm, {self._ages} days old")
 
 
 class Flower(Plant):
@@ -29,7 +29,7 @@ class Flower(Plant):
     def show(self) -> None:
         super().show()
         print(f"Color: {self._color}")
-        if  not self._bloom:
+        if not self._bloom:
             print(f"{self._name} has not bloomed yet\n")
         else:
             print(f"{self._name}  is blooming beautifully!\n")
@@ -48,7 +48,7 @@ class Tree(Plant):
 
     def show(self) -> None:
         super().show()
-        print( f"Trunk diameter: {self._trunk_diameter}cm")
+        print(f"Trunk diameter: {self._trunk_diameter}cm")
 
 
 class Vegetable(Plant):
